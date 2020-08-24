@@ -4,6 +4,7 @@ import "./App.css";
 import { render } from "@testing-library/react";
 import { Route, Link, Switch } from "react-router-dom";
 import Header from "./Header";
+import Footer from "./Footer";
 
 class TrendingMovies extends Component {
   constructor(props) {
@@ -28,7 +29,9 @@ class TrendingMovies extends Component {
     return (
       <div>
         <Header />
+        <h1>Trending Movies</h1>
         <div className="App">{movies}</div>
+        <Footer />
       </div>
     ); 
   }

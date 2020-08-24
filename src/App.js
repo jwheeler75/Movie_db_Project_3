@@ -7,13 +7,17 @@ import HomePage from "./HomePage"
 import SearchResults from "./SearchResults"
 import { Route, Link, Switch } from "react-router-dom"
 import Header from "./Header"
+
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
       allData: [],
+      searchInput: "",
+      searchResultsArray: [],
     };
+    this.getSearchResults=this.getSearchResults.bind(this);
   }
 
   componentDidMount() {
@@ -31,7 +35,22 @@ class App extends Component {
     });
   }
 
+  getSearchResults(searchInputFromForm) {
+    console.log("getSearchResults")
+    let searchInput = searchInputFromForm;
+    Axios.get(
+      `https://api.themoviedb.org/3/search/movie?api_key=4e6272d3a21f96d1387f88fd8d8e1acc&query=${searchInput}&page=1`
+    ).then((response) => {
+      console.log(response.data.results);
+      this.setState({
+        searchInput: searchInput,
+        searchResultsArray: response.data.results,
+      });
+    });
+  }
+
   render() {
+    console.log(this.state);
     return (
       <div className="App">
         <header>
@@ -42,11 +61,17 @@ class App extends Component {
         </div>
         <main>
           <Switch>
-            <Route exact path="/" component={HomePage} />
+            <Route exact path="/" render={(routerProps) =>  (
+              <HomePage getSearchResults={this.getSearchResults} 
+              searchResultsArray={this.state.searchResultsArray}/>
+            )} />
             <Route
               path="/trendingmovies"
               render={(routerProps) => (
+                <div>
                 <TrendingMovies {...this.state} {...routerProps} />
+                <SearchResults {...this.state} {...routerProps} />
+                </div>
               )}
             />
           </Switch>
