@@ -68,10 +68,14 @@ class App extends Component {
             <Route
               path="/trendingmovies"
               render={(routerProps) => (
-                <div>
                 <TrendingMovies {...this.state} {...routerProps} />
+              )}
+            />  
+
+            <Route 
+              path="/searchresults"
+              render={(routerProps) => (
                 <SearchResults {...this.state} {...routerProps} />
-                </div>
               )}
             />
           </Switch>
