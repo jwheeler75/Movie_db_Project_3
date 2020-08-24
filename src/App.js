@@ -5,7 +5,7 @@ import { render } from "@testing-library/react";
 import TrendingMovies from "./TrendingMovies";
 import HomePage from "./HomePage"
 import SearchResults from "./SearchResults"
-import { Route, Link, Switch } from "react-router-dom"
+import { Route, Link, Switch, withRouter } from "react-router-dom"
 import Header from "./Header"
 
 class App extends Component {
@@ -46,6 +46,7 @@ class App extends Component {
         searchInput: searchInput,
         searchResultsArray: response.data.results,
       });
+      this.props.history.push("/searchresults");
     });
   }
 
@@ -64,7 +65,8 @@ class App extends Component {
             <Route exact path="/" render={(routerProps) =>  (
               <HomePage getSearchResults={this.getSearchResults} 
               searchResultsArray={this.state.searchResultsArray}/>
-            )} />
+             
+            )}/>
             <Route
               path="/trendingmovies"
               render={(routerProps) => (
@@ -75,7 +77,11 @@ class App extends Component {
             <Route 
               path="/searchresults"
               render={(routerProps) => (
-                <SearchResults {...this.state} {...routerProps} />
+                <SearchResults 
+                  {...this.state} 
+                  {...routerProps} 
+                  getSearchResults={this.getSearchResults} 
+                />
               )}
             />
           </Switch>
@@ -86,4 +92,4 @@ class App extends Component {
     );
   }
 }
-export default App;
+export default withRouter (App);
