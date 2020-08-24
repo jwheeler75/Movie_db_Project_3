@@ -3,7 +3,10 @@ import Axios from "axios";
 import "./App.css";
 import { render } from "@testing-library/react";
 import TrendingMovies from "./TrendingMovies";
-
+import HomePage from "./HomePage"
+import SearchResults from "./SearchResults"
+import { Route, Link, Switch } from "react-router-dom"
+import Header from "./Header"
 class App extends Component {
   constructor() {
     super();
@@ -31,7 +34,25 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <TrendingMovies {...this.state} />
+        <header>
+          
+        </header>
+        <div>
+          
+        </div>
+        <main>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route
+              path="/trendingmovies"
+              render={(routerProps) => (
+                <TrendingMovies {...this.state} {...routerProps} />
+              )}
+            />
+          </Switch>
+        </main>
+
+        
       </div>
     );
   }
