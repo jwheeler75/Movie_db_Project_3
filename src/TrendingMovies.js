@@ -15,7 +15,6 @@ class TrendingMovies extends Component {
     let movies = this.props.allData.map((movie, index) => {
       return (
         <div className="movie" key={index}>
-        {/* <input onClick={this.props.getData} type="button" value="Get Trending Movies"></input> */}
           <h3>Title: {movie.title}</h3>
           <h3>Release Date: {movie.release_date}</h3>
           <h3>Popularity: {movie.popularity}</h3>
@@ -29,8 +28,8 @@ class TrendingMovies extends Component {
         <div className="App">{movies}</div>
         <Footer />
       </div>
-    ); 
+    );
   }
-};
+}
 
 export default TrendingMovies;
