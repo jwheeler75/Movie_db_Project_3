@@ -1,0 +1,23 @@
+.header {
+border: 10px solid aqua;
+display: flex;
+align-items: flex-end;
+background: url("./filmImage.png");
+background-repeat: no-repeat;
+justify-content: flex-end;
+
+
+
+
+}
+#title {
+    font-size: 55px;
+    display: flex;
+    
+
+
+    
+
+
+
+}

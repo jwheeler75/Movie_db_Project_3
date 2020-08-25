@@ -1,0 +1,17 @@
+.footer {
+
+
+
+border: 10px solid gold;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.title {
+    font-size: 50px;
+    
+
+
+
+}
