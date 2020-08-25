@@ -1,9 +1,10 @@
 .footer {
+    color: gold;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 98.5%;
-    background-color: red;
+    background-color: black;
 }
 
 
@@ -11,5 +12,6 @@
 
 
 html {
-    background-color: lightgreen;  
+    background-color: lightgray;  
+    background: url("./homePage.png");
 }
