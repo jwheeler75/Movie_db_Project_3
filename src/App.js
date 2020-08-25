@@ -62,11 +62,14 @@ class App extends Component {
         </div>
         <main>
           <Switch>
-            <Route exact path="/" render={(routerProps) =>  (
-              <HomePage getSearchResults={this.getSearchResults} 
-              searchResultsArray={this.state.searchResultsArray}/>
-             
-            )}/>
+            <Route exact 
+              path="/" 
+              render={(routerProps) =>  (
+                <HomePage getSearchResults={this.getSearchResults} 
+                  searchResultsArray={this.state.searchResultsArray} /> 
+              )}
+            />
+
             <Route
               path="/trendingmovies"
               render={(routerProps) => (
@@ -80,8 +83,7 @@ class App extends Component {
                 <SearchResults 
                   {...this.state} 
                   {...routerProps} 
-                  getSearchResults={this.getSearchResults} 
-                />
+                  getSearchResults={this.getSearchResults} />
               )}
             />
           </Switch>
