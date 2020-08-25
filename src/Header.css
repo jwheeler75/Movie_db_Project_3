@@ -3,21 +3,25 @@ border: 10px solid aqua;
 display: flex;
 align-items: flex-end;
 background: url("./filmImage.png");
-background-repeat: no-repeat;
-justify-content: flex-end;
-
-
-
+background-size: 100%;
+justify-content: center;
 
 }
-#title {
+.title {
     font-size: 55px;
     display: flex;
-    
-
-
-    
-
-
-
+    justify-self: center;
+    background-color: lightgrey;
+    border-radius: 15px;
+    opacity: 0.8;
 }
+.link {
+    color: red;
+    background-color: lightgrey;
+    opacity: 0.8;
+    position: relative;
+    right: 1%;
+}
+.link:hover {
+    color: #00F;
+ }

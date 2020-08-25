@@ -7,10 +7,10 @@ class Header extends Component{
     render() {
         return (
           <div className="header">
-            <h1 id="title">Movie DB </h1>
-            <nav>
-              <Link to="/">Back to Movie DB Home Page</Link>
-            </nav>
+            <h1 className="title">The Movie Db</h1>
+            {/* <nav> */}
+              <Link className="link" to="/">Back to Home</Link>
+            {/* </nav> */}
           </div>
         );
     }

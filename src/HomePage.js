@@ -3,6 +3,7 @@ import Header from "./Header";
 import { Route, Link, Switch } from "react-router-dom";
 import Footer from "./Footer";
 import SearchResults from "./SearchResults";
+import "./HomePage.css"
 
 class HomePage extends Component {
   constructor(props) {
@@ -18,11 +19,12 @@ class HomePage extends Component {
   render() {
     console.log(this.props);
     return (
-      <div>
-        <Header />
+      <div className="main">
+        <div>
+          <Header />
+        </div>
         <br></br>
         Welcome to the Movie DB Home Page
-        <br></br>
         <nav>
           <Link to="/trendingmovies">Trending Movies</Link>
           <form
@@ -35,7 +37,10 @@ class HomePage extends Component {
             <button>Search Movies</button>
           </form>
         </nav>
-        <Footer />
+        <div className="extraDiv"></div>
+        <div className="footer">
+        <Footer/>
+        </div>
       </div>
     );
   }

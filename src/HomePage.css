@@ -1,0 +1,15 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 98.5%;
+    background-color: red;
+}
+
+
+
+
+
+html {
+    background-color: lightgreen;  
+}
