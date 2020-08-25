@@ -9,7 +9,7 @@ class SearchResults extends Component {
     let movieSearchResults = this.props.searchResultsArray.map(
       (movie, index) => {
         return (
-          <div className="App" key={index}>
+          <div className="movie" key={index}>
             <img
               className="Alt"
               src={`https://image.tmdb.org/t/p/w154/${movie.poster_path}`}
@@ -38,7 +38,7 @@ class SearchResults extends Component {
             <input name="movie" placeholder="Search Movies" />
             <button>Search Movies</button>
           </form>
-          {movieSearchResults}
+          <div className="grid-container">{movieSearchResults}</div>
         </div>
         <div>
           <Footer />

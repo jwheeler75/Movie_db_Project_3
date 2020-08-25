@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import "./App.css";
+import "./TrendingMovies.css";
 import { render } from "@testing-library/react";
 import { Route, Link, Switch } from "react-router-dom";
 import Header from "./Header";
@@ -16,7 +16,6 @@ class TrendingMovies extends Component {
       return (
         <div className="movie" key={index}>
           <img
-            className="Alt"
             src={`https://image.tmdb.org/t/p/w154/${movie.poster_path}`}
             alt="Image not Found"
           />
@@ -29,8 +28,9 @@ class TrendingMovies extends Component {
     return (
       <div>
         <Header />
+        <div className="grid-container">{movies}</div>
         <h1>Trending Movies</h1>
-        <div className="App">{movies}</div>
+
         <Footer />
       </div>
     );

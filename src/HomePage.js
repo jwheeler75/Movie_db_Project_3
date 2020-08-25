@@ -3,7 +3,7 @@ import Header from "./Header";
 import { Route, Link, Switch } from "react-router-dom";
 import Footer from "./Footer";
 import SearchResults from "./SearchResults";
-import "./HomePage.css"
+import "./HomePage.css";
 
 class HomePage extends Component {
   constructor(props) {
@@ -24,8 +24,8 @@ class HomePage extends Component {
           <Header />
         </div>
         <br></br>
-        Welcome to the Movie DB Home Page
-        <nav>
+        <h1>Welcome to the Movie DB Home Page</h1>
+        <nav className="align-links">
           <Link to="/trendingmovies">Trending Movies</Link>
           <form
             onSubmit={(event) => {
@@ -39,7 +39,7 @@ class HomePage extends Component {
         </nav>
         <div className="extraDiv"></div>
         <div className="footer">
-        <Footer/>
+          <Footer />
         </div>
       </div>
     );

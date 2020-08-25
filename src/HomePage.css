@@ -1,17 +1,21 @@
 .footer {
-    color: gold;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 98.5%;
-    background-color: black;
+  color: gold;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: black;
 }
 
-
-
-
+h1 {
+  color: gold;
+  text-shadow: 4px 4px 6px #000000;
+}
 
 html {
-    background-color: lightgray;  
-    background: url("./homePage.png");
+  background-color: lightgray;
+  background: url("./homePage.png");
+}
+.align-links {
+  display: flex;
+  flex-direction: column;
 }
