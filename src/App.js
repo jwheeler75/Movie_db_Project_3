@@ -55,19 +55,18 @@ class App extends Component {
     console.log(this.state);
     return (
       <div className="App">
-        <header>
-          
-        </header>
-        <div>
-          
-        </div>
+        <header></header>
+        <div></div>
         <main>
           <Switch>
-            <Route exact 
-              path="/" 
-              render={(routerProps) =>  (
-                <HomePage getSearchResults={this.getSearchResults} 
-                  searchResultsArray={this.state.searchResultsArray} /> 
+            <Route
+              exact
+              path="/"
+              render={(routerProps) => (
+                <HomePage
+                  getSearchResults={this.getSearchResults}
+                  searchResultsArray={this.state.searchResultsArray}
+                />
               )}
             />
 
@@ -76,30 +75,30 @@ class App extends Component {
               render={(routerProps) => (
                 <TrendingMovies {...this.state} {...routerProps} />
               )}
-            />  
+            />
 
-            <Route 
+            <Route
               path="/searchresults"
               render={(routerProps) => (
-                <SearchResults 
-                  {...this.state} 
-                  {...routerProps} 
-                  getSearchResults={this.getSearchResults} />
+                <SearchResults
+                  {...this.state}
+                  {...routerProps}
+                  getSearchResults={this.getSearchResults}
+                />
               )}
             />
             <Route
               path="/MovieDetails/:id"
               render={(routerProps) => (
                 <MovieDetails
-                { ...this.state }
-            {...routerProps}
-              />
-              )}/>
+                  {...this.state}
+                  {...routerProps}
+                  
+                />
+              )}
+            />
           </Switch>
         </main>
-        
-
-        
       </div>
     );
   }

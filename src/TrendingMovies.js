@@ -22,7 +22,9 @@ class TrendingMovies extends Component {
             />
           </a>
           <h3>
-            <span>Title: </span>
+            <p>
+              (click image for more details)</p>
+                      <span>Title: </span>
             {movie.title}
           </h3>
           <h3>
@@ -39,8 +41,8 @@ class TrendingMovies extends Component {
     return (
       <div>
         <Header />
-        <div className="grid-container">{movies}</div>
         <h1>Trending Movies</h1>
+        <div className="grid-container">{movies}</div>
 
         <Footer />
       </div>

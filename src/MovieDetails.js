@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import "./MovieDetails.css";
-import { render } from "@testing-library/react";
-import { Route, Link, Switch } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
-import SearchResults from "./SearchResults"
+
 
 class MovieDetails extends Component {
   constructor(props) {
@@ -12,8 +10,9 @@ class MovieDetails extends Component {
   }
 
   render() {
-    console.log(this.props)
-    let movie = this.props.allData.find((movie, index) => {
+    let combinedResults = [...this.props.allData, ...this.props.searchResultsArray]
+    console.log(combinedResults)
+    let movie = combinedResults.find((movie, index) => {
       return movie.id == this.props.match.params.id
       
     });

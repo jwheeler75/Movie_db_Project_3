@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./App.css";
+import { Route, Link, Switch, withRouter } from "react-router-dom";
+
 
 class SearchResults extends Component {
   render() {
@@ -9,13 +11,14 @@ class SearchResults extends Component {
       (movie, index) => {
         return (
           <div className="movie" key={index}>
-            <a href={`/MovieDetails/${movie.id}`}>
+            <Link to={`/MovieDetails/${movie.id}`}>
               <img
                 src={`https://image.tmdb.org/t/p/w154/${movie.poster_path}`}
                 alt="Image not Found"
               />
-            </a>
+            </Link>
             <h3>
+              <p>(click image for more details)</p>
               <span>Title: </span>
               {movie.title}
             </h3>
@@ -38,6 +41,7 @@ class SearchResults extends Component {
           <Header />
         </div>
         <div>
+          <h1>Search Results</h1>
           <form
             onSubmit={(event) => {
               event.preventDefault();
