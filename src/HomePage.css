@@ -19,3 +19,22 @@ html {
   display: flex;
   flex-direction: column;
 }
+
+a:link,
+a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  align-self: center;
+}
+a:hover,
+a:active {
+  background-color: gold;
+  box-shadow: 0 5px #666;
+}

@@ -15,10 +15,14 @@ class TrendingMovies extends Component {
     let movies = this.props.allData.map((movie, index) => {
       return (
         <div className="movie" key={index}>
-          <img
-            src={`https://image.tmdb.org/t/p/w154/${movie.poster_path}`}
-            alt="Image not Found"
-          />
+          <a href={`https://www.themoviedb.org/movie/${movie.id}`}
+          >
+
+            <img
+              src={`https://image.tmdb.org/t/p/w154/${movie.poster_path}`}
+              alt="Image not Found"
+            />
+          </a>
           <h3>Title: {movie.title}</h3>
           <h3>Release Date: {movie.release_date}</h3>
           <h3>Popularity: {movie.popularity}</h3>
