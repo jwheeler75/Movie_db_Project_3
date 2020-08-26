@@ -7,6 +7,7 @@ import HomePage from "./HomePage"
 import SearchResults from "./SearchResults"
 import { Route, Link, Switch, withRouter } from "react-router-dom"
 import Header from "./Header"
+import MovieDetails from "./MovieDetails"
 
 class App extends Component {
   constructor() {
@@ -86,6 +87,14 @@ class App extends Component {
                   getSearchResults={this.getSearchResults} />
               )}
             />
+            <Route
+              path="/MovieDetails/:id"
+              render={(routerProps) => (
+                <MovieDetails
+                { ...this.state }
+            {...routerProps}
+              />
+              )}/>
           </Switch>
         </main>
         

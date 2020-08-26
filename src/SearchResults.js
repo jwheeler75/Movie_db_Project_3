@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Header from "./Header";
-import { Route, Link, Switch } from "react-router-dom";
 import Footer from "./Footer";
 import "./App.css";
 
@@ -10,7 +9,7 @@ class SearchResults extends Component {
       (movie, index) => {
         return (
           <div className="movie" key={index}>
-            <a href={`https://www.themoviedb.org/movie/${movie.id}`}>
+            <a href={`/MovieDetails/${movie.id}`}>
               <img
                 src={`https://image.tmdb.org/t/p/w154/${movie.poster_path}`}
                 alt="Image not Found"
