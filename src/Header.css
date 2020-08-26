@@ -1,6 +1,5 @@
 .header {
   border: 5px solid gold;
-  /* display: flex; */
   align-items: flex-end;
   background: url("./filmImage.png");
   background-size: 100%;
@@ -14,16 +13,7 @@
   border-radius: 15px;
   opacity: 0.8;
 }
-.link {
-  color: red;
-  background-color: lightgrey;
-  opacity: 0.8;
-  position: relative;
-  right: 1%;
-}
-.link:hover {
-  color: #00f;
-}
+
 .flex-title {
   display: flex;
   justify-content: center;

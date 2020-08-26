@@ -1,16 +1,9 @@
 import React, { Component } from "react";
-import axios from "axios";
 import "./TrendingMovies.css";
-import { render } from "@testing-library/react";
-import { Route, Link, Switch } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 
 class TrendingMovies extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     let movies = this.props.allData.map((movie, index) => {
       return (
@@ -22,9 +15,8 @@ class TrendingMovies extends Component {
             />
           </a>
           <h3>
-            <p>
-              (click image for more details)</p>
-                      <span>Title: </span>
+            <p>(click image for more details)</p>
+            <span>Title: </span>
             {movie.title}
           </h3>
           <h3>

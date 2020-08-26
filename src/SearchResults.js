@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./App.css";
-import { Route, Link, Switch, withRouter } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 class SearchResults extends Component {
   render() {

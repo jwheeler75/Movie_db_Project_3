@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
-import { Route, Link, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Footer from "./Footer";
-import SearchResults from "./SearchResults";
 import "./HomePage.css";
 
 class HomePage extends Component {
@@ -26,9 +25,8 @@ class HomePage extends Component {
         <br></br>
         <h1>Welcome to the Movie DB Home Page</h1>
         <nav className="align-links">
-          
-            <Link to="/trendingmovies">Trending Movies</Link>
-          
+          <Link to="/trendingmovies">Trending Movies</Link>
+
           <form
             onSubmit={(event) => {
               event.preventDefault();

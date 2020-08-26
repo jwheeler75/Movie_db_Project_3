@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./Footer.css";
-import { Route, Link, Switch } from "react-router-dom";
-import { waitForElementToBeRemoved } from "@testing-library/react";
+
 class Footer extends Component {
   render() {
     return (
@@ -15,7 +14,5 @@ class Footer extends Component {
     );
   }
 }
-    
-
 
 export default Footer;

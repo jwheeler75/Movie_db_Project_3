@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import "./App.css";
-import { render } from "@testing-library/react";
 import TrendingMovies from "./TrendingMovies";
-import HomePage from "./HomePage"
-import SearchResults from "./SearchResults"
-import { Route, Link, Switch, withRouter } from "react-router-dom"
-import Header from "./Header"
-import MovieDetails from "./MovieDetails"
+import HomePage from "./HomePage";
+import SearchResults from "./SearchResults";
+import { Route, Switch, withRouter } from "react-router-dom";
+import MovieDetails from "./MovieDetails";
 
 class App extends Component {
   constructor() {
@@ -18,7 +16,7 @@ class App extends Component {
       searchInput: "",
       searchResultsArray: [],
     };
-    this.getSearchResults=this.getSearchResults.bind(this);
+    this.getSearchResults = this.getSearchResults.bind(this);
   }
 
   componentDidMount() {
@@ -37,7 +35,7 @@ class App extends Component {
   }
 
   getSearchResults(searchInputFromForm) {
-    console.log("getSearchResults")
+    console.log("getSearchResults");
     let searchInput = searchInputFromForm;
     Axios.get(
       `https://api.themoviedb.org/3/search/movie?api_key=4e6272d3a21f96d1387f88fd8d8e1acc&query=${searchInput}&page=1`
@@ -90,11 +88,7 @@ class App extends Component {
             <Route
               path="/MovieDetails/:id"
               render={(routerProps) => (
-                <MovieDetails
-                  {...this.state}
-                  {...routerProps}
-                  
-                />
+                <MovieDetails {...this.state} {...routerProps} />
               )}
             />
           </Switch>
@@ -103,4 +97,4 @@ class App extends Component {
     );
   }
 }
-export default withRouter (App);
+export default withRouter(App);

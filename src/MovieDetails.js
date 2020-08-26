@@ -3,63 +3,68 @@ import "./MovieDetails.css";
 import Header from "./Header";
 import Footer from "./Footer";
 
-
 class MovieDetails extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    let combinedResults = [...this.props.allData, ...this.props.searchResultsArray]
-    console.log(combinedResults)
+    let combinedResults = [
+      ...this.props.allData,
+      ...this.props.searchResultsArray,
+    ];
+    console.log(combinedResults);
     let movie = combinedResults.find((movie, index) => {
-      return movie.id == this.props.match.params.id
-      
+      return movie.id == this.props.match.params.id;
     });
-    console.log(movie)
+    console.log(movie);
 
     if (movie) {
-      
-    
       return (
         <div>
           <Header />
-          <div className="movie">
+          <div className="movieDetails">
             <h1>Movie Details</h1>
             <img
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                 
               alt="Image not Found"
-            /> 
-            
-            <h3>Title: {movie.title}</h3>
-            <h3>Release Date: {movie.release_date}</h3>
-            <h3>Movie Overview: {movie.overview}</h3>
-            <h3>Original Language: {movie.original_language}</h3>
-            <h3>Original Title: {movie.original_title}</h3>
-            <h3>Popularity: {movie.popularity}</h3>
-                </div>
+            />
+            <h3>
+              <span>Title: </span>
+              {movie.title}
+            </h3>
+
+            <h3>
+              <span>Release Date: </span>
+              {movie.release_date}
+            </h3>
+            <h3>
+              <span>Movie Overview: </span>
+              {movie.overview}
+            </h3>
+            <h3>
+              <span>Original Language: </span>
+              {movie.original_language}
+            </h3>
+            <h3>
+              <span>Original Title: </span>
+              {movie.original_title}
+            </h3>
+            <h3>
+              <span>Popularity: </span>
+              {movie.popularity}
+            </h3>
+          </div>
 
           <Footer />
         </div>
       );
-    } else {return (
-      <div>
-        <Header />
-        <div className="movie">
-          <h1>Movie Details</h1>
-          
-        </div>
+    } else {
+      return (
+        <div>
+          <Header />
 
-        <Footer />
-      </div>
-    );
-      
+          <Footer />
+        </div>
+      );
     }
   }
 }
-
-
-
 
 export default MovieDetails;
