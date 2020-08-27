@@ -5,12 +5,25 @@ import Footer from "./Footer";
 
 class TrendingMovies extends Component {
   render() {
-    let movies = this.props.allData.map((movie, index) => {
+    let trendingMovies = [...this.props.allData];
+    let movies = trendingMovies.map((movie, index) => {
+      if (trendingMovies[index].title.length > 40) {
+        let substringTitle = trendingMovies[index].title.substr(0, 40);
+        let ellipse = "...";
+        movie.title = substringTitle + ellipse;
+      }
+      let releaseYear = trendingMovies[index].release_date.substr(0, 4);
+      movie.release_date = releaseYear;
+
       return (
         <div className="movie" key={index}>
           <a href={`/MovieDetails/${movie.id}`}>
             <img
-              src={`https://image.tmdb.org/t/p/w154/${movie.poster_path}`}
+              src={
+                movie.poster_path
+                  ? `https://image.tmdb.org/t/p/w154/${movie.poster_path}`
+                  : "/image-not-found.png"
+              }
               alt="Image not Found"
             />
           </a>

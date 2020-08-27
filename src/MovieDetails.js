@@ -22,7 +22,11 @@ class MovieDetails extends Component {
           <div className="movieDetails">
             <h1>Movie Details</h1>
             <img
-              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+              src={
+                movie.poster_path
+                  ? `https://image.tmdb.org/t/p/w154/${movie.poster_path}`
+                  : "/image-not-found.png"
+              }
               alt="Image not Found"
             />
             <h3>
