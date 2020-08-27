@@ -6,6 +6,13 @@
 ## Project Description
 This is a full stack React Router JS app.  Uses The Movie Data Base (TMDB) API to list trending movies and to search by user inputs. Two different API endpoints are used to do this.  Deatils can be seen for both trending or search results by clicking on a individual movie image.
 
+## Technologies Used
+React JS, React Router, Axios, React-Dom, and React-Router-Dom. Flex Box and Flex Grid for CSS.
+
+## API
+- https://developers.themoviedb.org/
+
+
 ## Project Links
 
 - GitHub Repo URL https://github.com/jwheeler75/Movie_db_Project_3
