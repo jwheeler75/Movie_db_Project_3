@@ -56,4 +56,3 @@ class TrendingMovies extends Component {
 }
 
 export default TrendingMovies;
-test;
