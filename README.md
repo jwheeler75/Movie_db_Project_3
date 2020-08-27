@@ -9,13 +9,15 @@ This is a full stack React Router JS app.  Uses The Movie Data Base (TMDB) API t
 ## Project Links
 
 - GitHub Repo URL https://github.com/jwheeler75/Movie_db_Project_3
-- Heroku Production URL TBD
+- Heroku Production URL https://movie-db-project-3.herokuapp.com/
 
 ## Wireframes and Flowcharts
 
-This is the wireframe for the app
+This is the wireframe for the app.
 
-- TBD
+- https://github.com/jwheeler75/Movie_db_Project_3/blob/master/planning/Movie_db_wire_diagram_2.drawio.pdf
+- https://github.com/jwheeler75/Movie_db_Project_3/blob/master/planning/Movie_Db_flowchart.drawio.pdf
+
 
 ## User Stories
 - As a user, I want a button to see trending movies.
@@ -50,11 +52,20 @@ This is the wireframe for the app
 ##start here
 ## Code Snippet
 
-This code allows you create multiline form input.  In this application, I'm also prepopulating the input boxes with a value from the db.
+This code allows sets the maxium number of characters for the movie title to 40 and adds the ... to the end of the first 40 characters.  The second strips off the month and date from the realease year.
 
-TBD TBD
+let trendingMovies = [...this.props.allData];
+    let movies = trendingMovies.map((movie, index) => {
+      if (trendingMovies[index].title.length > 40) {
+        let substringTitle = trendingMovies[index].title.substr(0, 40);
+        let ellipse = "...";
+        movie.title = substringTitle + ellipse;
+      }
+      let releaseYear = trendingMovies[index].release_date.substr(0, 4);
+      movie.release_date = releaseYear;
+
 
 ## Issues and Resolutions
 
-**ERROR**: Unwanted spacing in the textarea boxes causing issues with hardcoded drop box options.                               
-**RESOLUTION**: Using the prettier extention in VS Code moved the input value to the next line, and I indented it to make it flow with the rest of the code.  This added the unwanted spaces when it was rendered.
+**ERROR**: Getting the same title and year for both the trending and search results.                              
+**RESOLUTION**: We mapping over the the trending data array and not the search array data.  Simple copy and paste snag.
