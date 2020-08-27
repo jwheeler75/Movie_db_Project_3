@@ -35,7 +35,7 @@ This is the wireframe for the app
 
 ### MVP/PostMVP
 
- #### MVP
+#### MVP
 - Create homepage with 2 React routes to a Trending Movies page and a Search Results page
 - Call to API to get data
 - Enter user inputs to guide search API endpoint call
@@ -52,21 +52,7 @@ This is the wireframe for the app
 
 This code allows you create multiline form input.  In this application, I'm also prepopulating the input boxes with a value from the db.
 
-<form action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
-    Type of Meat:<br />
-    <textarea rows="1" cols="8"><%=recipe.typeOfMeat%></textarea>
-    <br />
-    Recipe:<br />
-    <textarea name="recipeName" rows="1" cols="40"><%=recipe.recipeName%></textarea>
-    <br />
-    Ingredients:<br />
-    <textarea name="ingredients" rows="10" cols="50"><%=recipe.ingredients%></textarea>
-    <br />
-    Instructions:<br />
-    <textarea name="instructions" rows="40" cols="50"><%=recipe.instructions%></textarea>
-    <br />
-    <input type="submit" name="" value="Submit Changes" />
-  </form>
+TBD TBD
 
 ## Issues and Resolutions
 
