@@ -1,49 +1,53 @@
-# BBQ Recipe App
+# The Movie Db App
 
 ## Project Overview
 
 
 ## Project Description
-This is a full stack BBQ Recipe App built using Node.js, Postgres, Express, EJS, and Sequelize.  It has a one to many relationship in the db, and it uses JWT for user authorization.   
+This is a full stack React Router JS app.  Uses The Movie Data Base (TMDB) API to list trending movies and to search by user inputs. Two different API endpoints are used to do this.  Deatils can be seen for both trending or search results by clicking on a individual movie image.
 
 ## Project Links
 
-- GitHub Repo URL https://github.com/jwheeler75/BBQ-RECIPE-APP
-- Heroku Production URL https://bbq-recipe-app.herokuapp.com/recipes
+- GitHub Repo URL https://github.com/jwheeler75/Movie_db_Project_3
+- Heroku Production URL TBD
 
-## Wireframes
+## Wireframes and Flowcharts
 
-This is the wireframe for the Recipe Index Page.
+This is the wireframe for the app
 
-- https://github.com/jwheeler75/BBQ-RECIPE-APP/blob/master/images/IMG_2675.JPG
+- TBD
 
 ## User Stories
-- As a user, I should have a Signup Page to create a new account.
-- As a user, I should have a Login Page to login to my a account.
-- As a user, I should have a Login Page to logout to my a account. 
-- As a user, I should have a user profile page that allows me to edit my user information.
-- As a user, I should able to search through a list of all recipe names and choose a recipe to view.
-- As a user, I should be able to create a new recipe. 
-- As a user, I should be able to edit a recipe. 
-- As a user, I should be able to delete a recipe. 
-- As a user, I should be able easily navigate between pages.
-- As a user, I should be able to see a list of recipes added by me.
-
+- As a user, I want a button to see trending movies.
+- As a user, I want to search for movies by my inputs.
+- As a user, I want a button to see search results.
+- As a user, I want the movie poster for any results (trending or search).
+- As a user, I want basic information about each movies on the results (trening or search).
+- As a user, I want to click on any movie poster and see a detail screen for that movie.
+- As a user, I want detail movie screen to have a larger image of the movie poster than results pages.
+- As a user, I want detail movie screen to have overview, original title and original language in addition to basic info on results pages.
+- As a user, I want a button to go back to home page from all pages.
+- As a user, I want a page title (ex. "Trending") on each page.
+- As a user, I want the entire app to have a consistent look and feel.
+- As a user, I want clickable elements to change color/highlight when I hover over them.
+- As a user, Marc wants an alternate "flat-tire" image to display when a movie poster is not available in the API.
+    
 
 ### MVP/PostMVP
 
  #### MVP
-- Create one model with all 7 RESTful routes and full CRUD.
-- 2 models that are associated in one-to-many relationship. 
-- Render data on User Profile, Recipe Index, and Recipe Show pages.
+- Create homepage with 2 React routes to a Trending Movies page and a Search Results page
+- Call to API to get data
+- Enter user inputs to guide search API endpoint call
+- Render data for the max 20 movies returned from Trending Movies or for Serrach Results
 - Allow user to interact with all pages.
 
 #### PostMVP
 
-- Create a page where each user can store their favorite recipes.
-- Show a picture of each recipe.
+- Create a detail page which displays any movie whose image is clicked on results pages
+- Handle/limit extra long movie titles.
 
-
+##start here
 ## Code Snippet
 
 This code allows you create multiline form input.  In this application, I'm also prepopulating the input boxes with a value from the db.
