@@ -49,7 +49,6 @@ This is the wireframe for the app.
 - Create a detail page which displays any movie whose image is clicked on results pages
 - Handle/limit extra long movie titles.
 
-##start here
 ## Code Snippet
 
 This code allows sets the maxium number of characters for the movie title to 40 and adds the ... to the end of the first 40 characters.  The second strips off the month and date from the realease year.
