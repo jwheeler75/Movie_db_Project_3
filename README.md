@@ -51,7 +51,7 @@ This is the wireframe for the app.
 
 ## Code Snippet
 
-This code allows sets the maxium number of characters for the movie title to 40 and adds the ... to the end of the first 40 characters.  The second strips off the month and date from the realease year.
+This code sets the maxium number of characters for the movie title to 40 and adds the ... to the end of the first 40 characters.  The second strips off the month and date from the realease year.
 
 let trendingMovies = [...this.props.allData];
     let movies = trendingMovies.map((movie, index) => {
