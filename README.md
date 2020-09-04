@@ -1,7 +1,20 @@
 # The Movie Db App
 
 ## Project Overview
+Project 3 is 3rd of 4 projects required in jdr-0622 SEI (Software Engineering Immersive) course by General Assembly as contracted for reskilling of displaced John Deere IT personnel.  Course for this cohort started 06/22/2020, hence the jdr-0622 course ID.  Exact project was determined by students within assignment prompt and as approved by advisor.
 
+Project team for this project was selected by GA instructors.
+
+Project Team Memebers:  
+  Marc Wright (GA Instructor Lead as team advisor)
+
+  Mark Meloy (student)
+
+  Jason Wheeler (student)
+
+  Darryl Grissom (student)
+
+Hence the "MJD LLC" on app.
 
 ## Project Description
 This is a full stack React Router JS app.  Uses The Movie Data Base (TMDB) API to list trending movies and to search by user inputs. Two different API endpoints are used to do this.  Deatils can be seen for both trending or search results by clicking on a individual movie image.
